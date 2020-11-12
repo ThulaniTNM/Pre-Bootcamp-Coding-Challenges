@@ -1,0 +1,36 @@
+a[role="button"]{
+    margin:5px;
+    vertical-align:middle;
+}
+a[role="button"]:hover{
+        background-color:crimson;
+}
+
+.taskHeader{
+    border-bottom: 2px solid grey; /*Probably overshadowed by box-shadow properties*/
+    text-align: center;
+    margin-bottom:1.5%;
+    -moz-box-shadow: 0px 4px 21px -2px rgba(0,0,0,0.51);
+    box-shadow: 0px 4px 21px -2px rgba(0,0,0,0.51);  
+}
+
+
+.controlArea{ /* create width of 80% center it ,put group buttons ,style it*/
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+    -moz-box-shadow: 0px 0px 21px -2px rgba(0,0,0,0.51);
+    box-shadow: 0px 0px 21px -2px rgba(0,0,0,0.51);              
+    padding:15px;
+}
+.linkActive{ /* redefine active*/
+background-color: crimson;
+color:white;
+}
+
+.content{
+    -webkit-box-shadow: 0px 0px 13px -6px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 13px -6px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 13px -6px rgba(0,0,0,0.75);
+
+}

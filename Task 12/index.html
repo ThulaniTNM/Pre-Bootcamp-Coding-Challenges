@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 12</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../Task 12/Style/Task12.css">
+
+</head>
+<body>
+    <!--Things to revisit.
+    1. Button group of links requiring a display flex on parent unlike usual button groups
+    2. Chaning display of image to be block element to fill in entire box
+    3. couldn't redefine active bootstrap class,had to define linkActive style
+    4. why button wanted to be inside of another column instead of its own.Same question applies to result box.
+    5. First design was horizontally layered,but vertical layered filling total width looks better.
+    6. Research button being put in form group and one inside its ownn div or without div.
+    7. task6.html line 54-56 move that div outside the div and see result.
+    8. Button group requiring a flex container,could have used 12 columns,each with its own button-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 taskHeader">
+            
+                    <h1>Task 12 UI</h1>
+                    <p class="text-muted">Might have to allow popup to open up Clicked Task,Tasks Start from Task 3+. Task 1 and 2 is just printing. NB!!! No error handling code</p>
+                
+            </div>
+        </div>
+     
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12" >
+                
+                <div class ="controlArea" >
+                    <h4 style="text-align: center;">Select Task to perform <i class="fa fa-hand-o-down" aria-hidden="true"></i> </h4>
+                        <div class="btn-group btn-group-sm" style="display: flex;overflow-x:scroll;"   role="group">
+
+                            <a href="#" class="btn btn-info" role="button"  ariapressed="true">Task 3</a>
+                            <a href="#" class="btn btn-info" role="button"  ariapressed="true">Task 4</a>
+                            <a href="#" class="btn btn-info" role="button"  ariapressed="true">Task 5</a>
+                            <a href="#" class="btn btn-info" role="button"  ariapressed="true">Task 6</a>
+                            <a href="#" class="btn btn-info" role="button"   ariapressed="true">Task 7</a>
+                            <a href="#" class="btn btn-info" role="button"  ariapressed="true">Task 8</a>
+                            <a href="#" class="btn btn-info" role="button"  ariapressed="true">Task 9</a>
+                            <a href="#" class="btn btn-info" role="button" ariapressed="true">Task 10</a>
+                            <a href="#" class="btn btn-info" role="button" ariapressed="true">Task 11</a>
+                           
+                        </div>
+                        <p style="width:50%;margin-left:auto;margin-right:auto;">
+                            <img src="Images/IMGT3.png" class="img-thumbnail" style="display:block;width:100%;"alt="Tasks Iamge image"/>
+                        </p>
+                </div>
+                   
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- jQuery and JS bundle w/ Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="Task12.js"></script>
+
+</body>
+</html>
