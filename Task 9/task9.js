@@ -1,18 +1,35 @@
-function multiplesBelowValue(number,belowValue){
+export function multiplesBelowValue(number,belowValue){
+    //Find all multiples of a value below a given number ,push them into an array
     var multiples = []; 
     
     for(var i = number;i<belowValue;){
-        multiples.push(i); // push in all the multiples
-        i += number; // increament i by the number itself,so multiples of 3 will keep on increamenting i by 3,so i will be 3 6 9..
+        multiples.push(i);
+        i += number; // multiples of 3 is ,3,6,9 . Pattern is number added by itself.
     }
     return multiples;
 }
 
-var accumulate = (sum,next)=>{return sum += next;}; // find some of any arrays
+export function accumulate(arrayMultiples){
+    // find sum of all elements and return it
+    let sum = 0;
 
-var firstValue = multiplesBelowValue(3,1000); // return array of multiples of 3 below 1000
+    for(const el of arrayMultiples){
+        sum +=el;
+    }
+    return sum;
+}
 
-var secondValue = multiplesBelowValue(5,1000); // return array of multiples of 5 below 1000
 
-var sumMultipleThreeAndFive = firstValue.reduce(accumulate) + secondValue.reduce(accumulate);  // add sum of multiples of 3 and multiples of 5
-console.log(sumMultipleThreeAndFive);
+
+// Multiples of 3 and 5
+let firstValueMultiples = multiplesBelowValue(3, 1000);
+let secondValueMultiples = multiplesBelowValue(5, 1000);
+
+// Individual sum of multiples of 3 and 5
+let firstValueMultiplesSum = accumulate(firstValueMultiples);
+let secondValueMultiplesSum = accumulate(secondValueMultiples);
+
+// Sum of both multiples of 3 and 5
+let sumOfBothMultiples = firstValueMultiplesSum+ secondValueMultiplesSum;
+
+console.log(sumOfBothMultiples);

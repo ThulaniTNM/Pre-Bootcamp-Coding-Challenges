@@ -1,4 +1,5 @@
-function checkSixtyFive(num1,num2){
+//Task 3
+export function checkSixtyFive(num1,num2){
     if (num1 ===65 || num2 === 65 || (num1+num2) === 65){
         return true;
     }
