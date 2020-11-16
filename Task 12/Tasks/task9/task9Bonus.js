@@ -12,17 +12,16 @@ btnMultiple.addEventListener('click',function(){
 
     // Multiple limiting/below value , input value 3.
     let BelowValue = Number.parseInt(num3.value);
+    let value1Input = Number.parseInt(num1.value);
+    let value2Input = Number.parseInt(num2.value);
 
     // Multiples of input value 1 and input value 2 below input value 3(Eg 3 and 5 below 10)
-    let firstValueMultiples = multiplesBelowValue(Number.parseInt(num1.value),BelowValue);
-    let secondValueMultiples =multiplesBelowValue( Number.parseInt(num2.value),BelowValue);
+    let valueMultiples = multiplesBelowValue(value1Input,value2Input,BelowValue);
     
-    // Sum of multpliples of two numbers
-    let firstValueMultiplesSum = accumulate(firstValueMultiples);
-    let secondValueMultiplesSum = accumulate(secondValueMultiples);
-    let sumOfBothMultiples = firstValueMultiplesSum+ secondValueMultiplesSum;
+    
+    // Sum of multpliples
+    let valueMultiplesSum = accumulate(valueMultiples);
 
-    result.innerHTML ="Multiples of "+num1.value +" below"+BelowValue+" is :"+"<span class='value1'>"+firstValueMultiples+"</span> <br />";
-    result.innerHTML +="Multiples of "+num2.value +" below"+BelowValue+" is :"+"<span class='value2'>"+secondValueMultiples+"</span> <br />";
-    result.innerHTML += "Sum of both multiples is :"+ "<span class='value1'>"+sumOfBothMultiples+"</span>";
+    result.innerHTML ="Multiples of "+num1.value +" and"+num2.value +" below"+BelowValue+" is :"+"<span class='value2'>"+valueMultiples+"</span> <br />";
+    result.innerHTML += "Sum of both multiples is :"+ "<span class='value1'>"+valueMultiplesSum+"</span>";
 });

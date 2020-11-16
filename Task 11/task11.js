@@ -1,17 +1,14 @@
 // Task 11
+// Find matching elements in two data structures.
 export function compareElements(data1,data2){
     var result = [];
-  
-    // commpare each element in argument data1 with every element in argument data2
-    // push matching element to array
-    //Return array with duplicates removed.
-    for(var dt1 of data1){ 
-        for(var dt2 of data2){
-            if (dt2.toLowerCase() ===dt1.toLowerCase()){
-                result.push(dt1);
+    
+    for(let i=0;i<data1.length;i++){
+        for(let k=0;k<data2.length;k++){
+            if (data1[i].toLowerCase() ===data2[k].toLowerCase()){
+                result.push(data1[i]);
             }
         }
-        
     }
     return [...new Set( result)]; 
   }
